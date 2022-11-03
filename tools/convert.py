@@ -113,7 +113,7 @@ def main():
         if is_dir(os.stat(f).st_mode):
             continue
 
-        if f == "README":
+        if not f.endswith(".xml"):
             continue
 
         doc, time = read_config(f, convertTime)
